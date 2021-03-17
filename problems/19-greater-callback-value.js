@@ -5,12 +5,7 @@ result of the callback that is greater.
 *******************************************************************************/
 
 let greaterCallbackValue = function(val, cb1, cb2) {
-    let val1 = cb1(val)
-    let val2 = cb2(val)
-    if (val1 > val2) {
-        return val1
-    }
-    return val2
+  
 };
 
 
