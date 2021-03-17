@@ -17,7 +17,11 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
 let myMap = function(arr, cb) {
-
+    let newArr = [];
+    arr.forEach(function(ele){
+        newArr.push(cb(ele));
+    })
+    return newArr;
 };
 
 
