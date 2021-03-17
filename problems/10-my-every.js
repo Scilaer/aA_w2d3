@@ -7,19 +7,22 @@ Do not use the built in Array#every.
 *******************************************************************************/
 
 let myEvery = function(arr, cb) {
+    let boolean = true
     arr.forEach(function(el) {
-        if (cb(el) === false) return false
+        if (cb(el) === false) {
+            boolean = false
+        }
     })
-    return true
+    return boolean
 }
 
 
-    for ( let i = 0; i < arr.length; i++ ) {
-        let el = arr[i]
-        if (cb(el) === false) return false
-    }
-    return true
-};
+//     for ( let i = 0; i < arr.length; i++ ) {
+//         let el = arr[i]
+//         if (cb(el) === false) return false
+//     }
+//     return true
+// };
 
 
 let isEven = function (num) {

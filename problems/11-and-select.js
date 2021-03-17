@@ -10,7 +10,15 @@ Examples:
 *******************************************************************************/
 
 let andSelect = function(arr, cb1, cb2) {
-    
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let el = arr[i];
+
+        if(cb1(el) && cb2(el)){
+            newArr.push(el)
+        }
+    }
+    return newArr;
 };
 
 
