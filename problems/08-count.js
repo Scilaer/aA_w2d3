@@ -8,11 +8,14 @@ Examples:
 *******************************************************************************/
 
 let count = function(arr, cb) {
+    let counter = 0;
 
-    
-
-
-
+    arr.forEach(function(el){
+        if(cb(el)){
+            counter++;
+        }
+    })
+    return counter;
 };
 
 
